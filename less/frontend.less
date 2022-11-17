@@ -1,0 +1,45 @@
+body {
+  background-color: @bg-color;
+  color: @text-color;
+}
+
+div#main {
+  width: 600px;
+  text-align: center
+}
+
+div.section {
+  margin-top: 20px
+}
+
+div, img {
+  margin: auto
+}
+
+img {
+  display: block;
+  &#drawing {
+    // image-rendering: pixelated;
+    width: 60%;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:link, &:visited, &:active {
+    color: @link-color;
+  }
+  &:hover {
+    color: lighten(@link-color, 10%);
+  }
+}
+
+h2 {
+  margin-bottom: .2em;
+}
+
+#header {
+  color: @text-color;
+  background-color: @bg-color;
+  margin: 0;
+}
