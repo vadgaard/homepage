@@ -1,4 +1,6 @@
 <?php
+$mail_code = "&#108;&#97;&#114;&#115;&#64;&#118;&#97;&#100;&#103;&#97;&#97;&#114;&#100;&#46;&#109;&#101;";
+
 $quotes = array(
     "among the top 2 billion best websites of all time"
   , "one of the websites ever made"
@@ -13,9 +15,9 @@ $key = array_rand($quotes);
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>vadg.io | lars</title>
+    <title>lars vadgaard</title>
     <meta name="description" content="Homepage of Lars Vadgaard">
-    <link rel="stylesheet" href="frontend_dark.css">
+    <link rel="stylesheet" href="frontend_light.css">
     <script src="jquery-3.6.1.min.js"></script>
     <script src="frontend.js"></script>
   </head>
@@ -24,15 +26,15 @@ $key = array_rand($quotes);
       <div class="section">
         <h2>welcome to my website</h2>
         <button id="header">mystery button</button>
-        <img id="drawing" src="img/drawing_dark.png">
+        <img id="drawing" src="img/drawing_light.png">
         <p>&quot;<?= $quotes[$key] ?>&quot;</p>
       </div>
       <div class="section">
         <h4>ALSO</h4>
         <p>
             email:
-            <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#118;&#097;&#100;&#103;&#046;&#105;&#111;">
-                &#104;&#101;&#108;&#108;&#111;&#064;&#118;&#097;&#100;&#103;&#046;&#105;&#111;
+            <a href="mailto:<?= $mail_code ?>">
+                <?= $mail_code ?>
             </a>
             |
             name: lars
@@ -54,7 +56,7 @@ $key = array_rand($quotes);
         <p><a href="https://github.com/vadgaard/AP-Exam" target="_blank">ap exam solution</a></p>
         <p><a href="misc/resume.pdf" target="_blank">resume.pdf</a></p>
       </div>
-      <div class="section">sincerely,<img src="img/signature_dark.png" style="width: 30%">lars vadgaard</div>
+      <div class="section">sincerely,<img src="img/signature_light.png" style="width: 30%">lars vadgaard</div>
     </div>
   </body>
 </html>
