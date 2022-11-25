@@ -1,7 +1,4 @@
 run :
-	docker-compose up -d
-
-build_run:
-	docker-compose up -d --build
+	~/.docker/cli-plugins/docker-compose up -d
 
 .PHONY: run build_run

@@ -15,8 +15,8 @@ $key = array_rand($quotes);
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>lars vadgaard</title>
-    <meta name="description" content="Homepage of Lars Vadgaard">
+    <title>lars husted vadgaard</title>
+    <meta name="description" content="homepage of lars husted vadgaard">
     <link rel="stylesheet" href="frontend_light.css">
     <script src="jquery-3.6.1.min.js"></script>
     <script src="frontend.js"></script>
@@ -56,7 +56,7 @@ $key = array_rand($quotes);
         <p><a href="https://github.com/vadgaard/AP-Exam" target="_blank">ap exam solution</a></p>
         <p><a href="misc/resume.pdf" target="_blank">resume.pdf</a></p>
       </div>
-      <div class="section">sincerely,<img src="img/signature_light.png" style="width: 30%">lars vadgaard</div>
+      <div class="section">sincerely,<img src="img/signature_light.png" style="width: 30%">lars husted vadgaard</div>
     </div>
   </body>
 </html>
