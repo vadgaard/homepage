@@ -1,6 +1,19 @@
 <?php
-$mail_code = "&#108;&#97;&#114;&#115;&#64;&#118;&#97;&#100;&#103;&#97;&#97;&#114;&#100;&#46;&#109;&#101;";
 
+include('../utils/obfuscate.php');
+
+// read config
+$info = json_decode(file_get_contents('../info.json'), true);
+
+// set values
+$email    = obfuscate($info['email']);
+$github   = obfuscate($info['github']);
+$linkedin = obfuscate($info['linkedin']);
+$rlsrl    = obfuscate($info['rlsrl']);
+$rlsrl2   = obfuscate($info['rlsrl2']);
+$fullname = obfuscate(strtolower($info['fullname']));
+
+// set random quotes
 $quotes = array(
     "among the top 2 billion best websites of all time"
   , "one of the websites ever made"
@@ -10,13 +23,14 @@ $quotes = array(
   , "please hire me"
 );
 
+// generate random quote key
 $key = array_rand($quotes);
 ?>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>lars husted vadgaard</title>
-    <meta name="description" content="homepage of lars husted vadgaard">
+    <title><?= $fullname ?></title>
+    <meta name="description" content="homepage of <?= $fullname ?>">
     <link rel="stylesheet" href="frontend_light.css">
     <script src="jquery-3.6.1.min.js"></script>
     <script src="frontend.js"></script>
@@ -33,30 +47,29 @@ $key = array_rand($quotes);
         <h4>ALSO</h4>
         <p>
             email:
-            <a href="mailto:<?= $mail_code ?>">
-                <?= $mail_code ?>
+            <a href="mailto:<?= $email ?>">
+                <?= $email ?>
             </a>
             |
-            name: lars
+            name: <?= $fullname ?>
             |
-            interests: functional programming, coffee, piano, retro anime
+            interests: functional programming, coffee, sci-fi, sushi, retro anime
             |
             education: m.sc. in computer science
             |
-            linkedin: <a href="https://www.linkedin.com/in/larsvadgaard">link</a>
+            linkedin: <a href="<?= $linkedin ?>" target='_blank'>link</a>
             |
-            github: <a href="https://github.com/vadgaard">link</a>
-            |
-            youtube: <a href="https://www.youtube.com/channel/UCzcxIx7IK_LSjU-D5ohKLLg">link</a>
+            github: <a href="<?= $github ?>" target='_blank'>link</a>
         </p>
       </div>
       <div class="section">
         <h4>OTHER STUFF</h4>
-        <p><a href="https://rev.vadg.io" target="_blank">rl/srl playground</a></p>
-        <p><a href="https://github.com/vadgaard/AP-Exam" target="_blank">ap exam solution</a></p>
+        <p><a href="<?= $rlsrl ?>" target="_blank">rl/srl playground (haskell)</a></p>
+        <p><a href="<?= $rlsrl2 ?>" target="_blank">rl/srl playground (php)</a></p>
+        <p><a href="<?= $github ?>/AP-Exam" target="_blank">ap exam solution</a></p>
         <p><a href="misc/resume.pdf" target="_blank">resume.pdf</a></p>
       </div>
-      <div class="section">sincerely,<img src="img/signature_light.png" style="width: 30%">lars husted vadgaard</div>
+      <div class="section">sincerely,<img src="img/signature_light.png" style="width: 30%"><?= $fullname ?></div>
     </div>
   </body>
 </html>
