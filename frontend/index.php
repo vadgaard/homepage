@@ -10,7 +10,7 @@ $email    = obfuscate($info['email']);
 $github   = obfuscate($info['github']);
 $linkedin = obfuscate($info['linkedin']);
 $rlsrl    = obfuscate($info['rlsrl']);
-$rlsrl2   = obfuscate($info['rlsrl2']);
+$rlsrl2   = obfuscate($info['rlsrll']);
 $fullname = obfuscate(strtolower($info['fullname']));
 
 // set random quotes
@@ -29,7 +29,7 @@ $key = array_rand($quotes);
 <html>
   <head>
     <meta charset="UTF-8">
-    <title><?= $fullname ?></title>
+    <title>lars | homepage</title>
     <meta name="description" content="homepage of <?= $fullname ?>">
     <link rel="stylesheet" href="frontend_light.css">
     <script src="jquery-3.6.1.min.js"></script>
