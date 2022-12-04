@@ -53,7 +53,7 @@ $key = array_rand($quotes);
             |
             name: <?= $fullname ?>
             |
-            interests: functional programming, coffee, sci-fi, sushi, retro anime
+            interests: functional programming, coffee, sushi, retro anime
             |
             education: m.sc. in computer science
             |
@@ -69,6 +69,7 @@ $key = array_rand($quotes);
         <p><a href="<?= $github ?>/AP-Exam" target="_blank">ap exam solution</a></p>
         <p><a href="misc/resume.pdf" target="_blank">resume.pdf</a></p>
       </div>
+      <hr size="1" width="70%"/>
       <div class="section">sincerely,<img src="img/signature_light.png" style="width: 30%"><?= $fullname ?></div>
     </div>
   </body>
